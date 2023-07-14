@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="array"></p>
+    <p class="arreven"></p>
+    <p class="sum"></p>
+    <script>
+        let arr=[]
+        let counter=0
+        let num=0
+          let evenNumber=[]
+        let arrsum=[]
+        while(counter<4){
+             arr.push(prompt('elementleri daxil edin'))
+            counter++
+        }
+        document.querySelector('.array').innerHTML=`arr = ${arr}`
+        arr.forEach(item=>{
+            if(parseInt(item)%2===0){
+                evenNumber.push(item)
+                document.querySelector('.arreven').innerHTML=`arr even = ${evenNumber}`
+            }
+        }) ;
+        arr.forEach(elem => {
+            if(elem>0){
+                num+=parseInt(elem);
+                console.log(num);
+            }
+            document.querySelector('.sum').innerHTML=`sum positiv number = ${num}`
+      });
+
+       
+    </script>
+</body>
+</html>
